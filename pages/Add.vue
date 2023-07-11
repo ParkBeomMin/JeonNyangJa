@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <label for="upload" class="upload-button">
+    <div class="flex flex-col">
+        <label for="upload" class="bg-key-color-light text-key-color-dark">
             <span>이미지 선택</span>
-            <input id="upload" type="file" accept="image/*" @change="handleImageUpload" />
+            <input v-show="false" id="upload" type="file" accept="image/*" @change="handleImageUpload" />
         </label>
         <Cropper
             v-if="imageUrl"
@@ -19,15 +19,21 @@
             image-restriction="stencil"
             :src="imageUrl"
             alt="Preview Image"
+            @change="onCropChange"
         />
+        <input type="text" v-model="useImageUploadData.name" />
+        <textarea v-model="useImageUploadData.oneSentence" />
+        <img v-if="cropImageUrl" :src="cropImageUrl" alt="" />
     </div>
 </template>
 
 <script setup lang="ts">
+// https://advanced-cropper.github.io/vue-advanced-cropper/guides/recipes.html#getting-the-result
 import { Cropper } from 'vue-advanced-cropper';
-
-const { useImageUploadData, handleImageUpload } = useImageUpload();
+import 'vue-advanced-cropper/dist/style.css';
+const { useImageUploadData, handleImageUpload, onCropChange } = useImageUpload();
 const imageUrl = computed(() => useImageUploadData.imageUrl);
+const cropImageUrl = computed(() => useImageUploadData.cropImageUrl);
 </script>
 
 <style scoped>

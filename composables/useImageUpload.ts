@@ -1,5 +1,5 @@
 export const useImageUpload = () => {
-    const useImageUploadData: { imageUrl: string } = reactive({ imageUrl: '' });
+    const useImageUploadData: { imageUrl: string; cropImageUrl: string; name: string; oneSentence: string } = reactive({ imageUrl: '', cropImageUrl: '', name: '', oneSentence: '' });
 
     const handleImageUpload = (event: Event) => {
         const file = (event.target as HTMLInputElement).files?.[0];
@@ -20,5 +20,12 @@ export const useImageUpload = () => {
             reader.readAsDataURL(file);
         }
     };
-    return { useImageUploadData, handleImageUpload };
+
+    const onCropChange = ({ coordinates, canvas }: { coordinates: any; canvas: any }) => {
+        console.log(coordinates);
+
+        useImageUploadData.cropImageUrl = canvas.toDataURL();
+    };
+
+    return { useImageUploadData, handleImageUpload, onCropChange };
 };
