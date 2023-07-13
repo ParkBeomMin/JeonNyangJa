@@ -27,5 +27,9 @@ export const useImageUpload = () => {
         useImageUploadData.cropImageUrl = canvas.toDataURL();
     };
 
-    return { useImageUploadData, handleImageUpload, onCropChange };
+    const onUpload = () => {
+        console.log(useImageUploadData.cropImageUrl);
+    };
+
+    return { useImageUploadData, handleImageUpload, onCropChange, onUpload };
 };

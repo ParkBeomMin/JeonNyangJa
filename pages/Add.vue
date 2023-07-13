@@ -1,12 +1,11 @@
 <template>
-    <div class="flex flex-col">
-        <label for="upload" class="bg-key-color-light text-key-color-dark">
+    <div class="flex flex-col px-4">
+        <label for="upload" class="bg-key-color-light text-key-color-dark w-full h-full">
             <span>이미지 선택</span>
             <input v-show="false" id="upload" type="file" accept="image/*" @change="handleImageUpload" />
         </label>
         <Cropper
-            v-if="imageUrl"
-            class="cropper"
+            class="w-full h-96 bg-slate-300"
             :stencil-props="{
                 handlers: {},
                 movable: false,
@@ -21,9 +20,11 @@
             alt="Preview Image"
             @change="onCropChange"
         />
-        <input type="text" v-model="useImageUploadData.name" />
-        <textarea v-model="useImageUploadData.oneSentence" />
+        <div class=""></div>
+        <LabelInput label="이름" v-model="useImageUploadData.name" />
+        <LabelTextArea label="한마디" v-model="useImageUploadData.oneSentence" />
         <img v-if="cropImageUrl" :src="cropImageUrl" alt="" />
+        <button @click="onUpload">확인</button>
     </div>
 </template>
 
@@ -31,7 +32,7 @@
 // https://advanced-cropper.github.io/vue-advanced-cropper/guides/recipes.html#getting-the-result
 import { Cropper } from 'vue-advanced-cropper';
 import 'vue-advanced-cropper/dist/style.css';
-const { useImageUploadData, handleImageUpload, onCropChange } = useImageUpload();
+const { useImageUploadData, handleImageUpload, onCropChange, onUpload } = useImageUpload();
 const imageUrl = computed(() => useImageUploadData.imageUrl);
 const cropImageUrl = computed(() => useImageUploadData.cropImageUrl);
 </script>

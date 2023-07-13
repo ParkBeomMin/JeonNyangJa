@@ -14,7 +14,7 @@ export default <Partial<Config>>{
         extend: {
             colors: {
                 'key-color-light': '#2F2F31',
-                'key-color-dark': '#543116',
+                'key-color-dark': '#E2A370',
             },
         },
     },
