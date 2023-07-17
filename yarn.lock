@@ -1523,6 +1523,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/feather-icons@npm:^4":
+  version: 4.29.1
+  resolution: "@types/feather-icons@npm:4.29.1"
+  checksum: 97b75814db6b3bb0545e435c335a7392c0f10a0ea4a4b95c2f4db9b608c0a0bd36cbf84e264d1d977c01d4511fc10504c5063487d4ccc2eda2bda39b44f6fd7f
+  languageName: node
+  linkType: hard
+
 "@types/http-proxy@npm:^1.17.11":
   version: 1.17.11
   resolution: "@types/http-proxy@npm:1.17.11"
@@ -2602,7 +2609,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.6":
+"classnames@npm:^2.2.5, classnames@npm:^2.2.6":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
   checksum: ba3151c12e8b6a84c64b340ab4259ad0408947652009314462d828e94631505989c6a7d7e796bec1d309be9295d3111b498ad18a9d533fe3e6f859e51e574cbb
@@ -2852,6 +2859,13 @@ __metadata:
     depd: "npm:~2.0.0"
     keygrip: "npm:~1.1.0"
   checksum: 5da4d72ba81c2740511751ac8ea9506e10e2366b9ad3360333581e4667fd8d063d02c5be0bef16177de3e366b8128ed2b72921e2952c79cbca084d177e529bba
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.1.3":
+  version: 3.31.1
+  resolution: "core-js@npm:3.31.1"
+  checksum: f3b0b424f9ba02c6235c8739651943f06823e7ec3e02e0f819490a05f15a08cadc3a011853947466bececb6e7f4987f826142293fc4bc2ea11216e839579a257
   languageName: node
   linkType: hard
 
@@ -3891,6 +3905,16 @@ __metadata:
   dependencies:
     pend: "npm:~1.2.0"
   checksum: db3e34fa483b5873b73f248e818f8a8b59a6427fd8b1436cd439c195fdf11e8659419404826059a642b57d18075c856d06d6a50a1413b714f12f833a9341ead3
+  languageName: node
+  linkType: hard
+
+"feather-icons@npm:^4.29.0":
+  version: 4.29.0
+  resolution: "feather-icons@npm:4.29.0"
+  dependencies:
+    classnames: "npm:^2.2.5"
+    core-js: "npm:^3.1.3"
+  checksum: ac24b30b686fe5ddbf721fd9fc4960804c766cb65dad2c6642b5adf5ac2a49bb8bf0af2fdff3f0de9128af11c5a4897749747172167e23bdf7c255a7346a094b
   languageName: node
   linkType: hard
 
@@ -6196,6 +6220,8 @@ __metadata:
     "@hypernym/nuxt-anime": "npm:^2.1.0"
     "@nuxt/devtools": "npm:latest"
     "@nuxtjs/tailwindcss": "npm:^6.8.0"
+    "@types/feather-icons": "npm:^4"
+    feather-icons: "npm:^4.29.0"
     nuxt: "npm:^3.6.2"
     vue-advanced-cropper: "npm:^2.8.8"
   languageName: unknown
