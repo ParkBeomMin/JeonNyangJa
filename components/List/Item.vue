@@ -1,6 +1,7 @@
 <template>
     <TouchContainer @onClick="onClick" @onLongClick="onLongClick">
         <img :src="url" alt="" />
+        <p>{{ cat.id }}</p>
     </TouchContainer>
 </template>
 
@@ -12,7 +13,10 @@ const emit = defineEmits(['onClick', 'onLongClick']);
 const url = computed(() => `/assets/${props.cat.img}`);
 
 const onClick = () => {
-    console.log('click');
+    console.log('click', cat);
+
+    const router = useRouter();
+    router.push(`/Cat/${cat.value.id}`);
 };
 
 const onLongClick = () => {

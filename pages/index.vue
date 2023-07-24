@@ -1,3 +1,6 @@
 <template>
-    <div></div>
+    <div>
+        <Ranking type="week" />
+        <Ranking type="month" />
+    </div>
 </template>
