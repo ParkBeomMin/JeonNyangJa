@@ -1,10 +1,12 @@
 <template>
-    <TouchContainer class="flex flex-col" @onDoubleClick="onDoubleClick">
-        <img :src="url" :alt="`${name}-${id}`" />
+    <div class="flex flex-col min-h-screen">
+        <TouchContainer @onDoubleClick="onDoubleClick">
+            <img :src="url" :alt="`${name}-${id}`" />
+        </TouchContainer>
         <DetailUtils />
         <span>{{ name }}</span>
         <span>{{ oneSentence }}</span>
-    </TouchContainer>
+    </div>
 </template>
 
 <script setup lang="ts">
